@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['prefix'=>'admin'],function(){
+    Route::get('news/create','Admin\NewsController@add');
+    
+    // PHP/Lavel09Routingについて理解する.課題4
+    Route::get('profile/create','Admin\profileController@add');
+    
+    Route::get('profile/edit','Admin\profileController@edit');
+});
+// php/Laravel09Routingについて理解する.課題３
+Route::get('XXX','AAAController@bbb');
